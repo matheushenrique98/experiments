@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "experiments"
+version = "0.1.0"
+description = ""
+authors = ["Matheus Henrique <matheus2hcosta@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.1"
+uvicorn = "^0.22.0"
+mypy = "^1.2.0"
+sentry-sdk = {extras = ["fastapi"], version = "^1.21.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+disable = ["missing-function-docstring", "missing-class-docstring", "missing-module-docstring", "trailing-whitespace"]
