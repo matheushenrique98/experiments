@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  do_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+      args:
+        arg_time: 50000
+    environment:
+      - SLEEP_TIME=200000
+    volumes:
+      - type: bind
+        source: ./sometest
+        target: /opt/code/test
