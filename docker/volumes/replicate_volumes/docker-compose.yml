@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  replicate_local_to_container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SOME_SLEEP=3323232
+    volumes:
+      - type: bind
+        source: ./replicate
+        target: /anothertest/replicate
+      - ./replicate2:/anothertest/replicate2
+
